@@ -26,6 +26,7 @@ def quicksort(array):
     right = [i for i in array[1:] if i >= pivot]
     return quicksort(left) + [pivot] + quicksort(right)
 
+@profile
 def quicksort_inplace(array, low=0, high=None):
     if len(array) <= 1:
         return array
